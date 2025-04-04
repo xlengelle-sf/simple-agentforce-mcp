@@ -4,7 +4,7 @@
   "description": "Simple MCP tool for Salesforce Agentforce API",
   "main": "dist/index.js",
   "bin": {
-    "simple-agentforce-tool": "./dist/cli.js"
+    "simple-agentforce-tool": "dist/cli.js"
   },
   "scripts": {
     "build": "tsc",
