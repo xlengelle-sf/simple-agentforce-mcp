@@ -61,7 +61,21 @@ agentforce-tool
 
 You should see output indicating the tool is running on port 3001.
 
-### Step 5: Configure Claude Desktop
+### Step 5: Verify the Setup
+
+Run the verification script to make sure everything is properly installed and configured:
+
+```bash
+curl -s https://raw.githubusercontent.com/xlengelle-sf/simple-agentforce-mcp/main/verify-setup.sh | bash
+```
+
+This script will check for:
+- Node.js and npm installation
+- Package installation
+- Configuration files
+- Proper setup
+
+### Step 6: Configure Claude Desktop
 
 1. Open Claude Desktop
 2. Go to Settings > Tools
