@@ -4,8 +4,8 @@ The Agentforce MCP packages have been successfully published to npm and are now 
 
 ## Published Packages
 
-- [@xlengelle-sf/agentforce-server](https://www.npmjs.com/package/@xlengelle-sf/agentforce-server) - The MCP server for Agentforce API
-- [@xlengelle-sf/agentforce-tool](https://www.npmjs.com/package/@xlengelle-sf/agentforce-tool) - The MCP tool for Claude Desktop integration
+- [@xlengelle-sf/agentforce-server](https://www.npmjs.com/package/@xlengelle-sf/agentforce-server) (v1.2.0) - The MCP server for Agentforce API with interactive CLI
+- [@xlengelle-sf/agentforce-tool](https://www.npmjs.com/package/@xlengelle-sf/agentforce-tool) (v1.2.0) - The MCP tool for Claude Desktop integration
 
 ## Installation
 
@@ -14,9 +14,23 @@ The Agentforce MCP packages have been successfully published to npm and are now 
 npm install -g @xlengelle-sf/agentforce-server
 npm install -g @xlengelle-sf/agentforce-tool
 
-# Run the components
+# Run the server with interactive CLI
 agentforce-server
+# Follow the prompts to configure the server
+
+# In another terminal, run the tool
 agentforce-tool
+```
+
+## Docker Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/xlengelle-sf/simple-agentforce-mcp.git
+cd simple-agentforce-mcp
+
+# Run with Docker Compose
+docker-compose up -d
 ```
 
 ## Next Steps
