@@ -4,7 +4,9 @@ A simple and effective MCP server and tool suite for Salesforce Agentforce API, 
 
 [![npm version](https://img.shields.io/npm/v/@xlengelle-sf/agentforce-server.svg)](https://www.npmjs.com/package/@xlengelle-sf/agentforce-server)
 [![npm version](https://img.shields.io/npm/v/@xlengelle-sf/agentforce-tool.svg)](https://www.npmjs.com/package/@xlengelle-sf/agentforce-tool)
+[![Tests](https://github.com/xlengelle-sf/simple-agentforce-mcp/actions/workflows/test.yml/badge.svg)](https://github.com/xlengelle-sf/simple-agentforce-mcp/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js Version](https://img.shields.io/node/v/@xlengelle-sf/agentforce-server)](https://nodejs.org/)
 
 ## Overview
 
