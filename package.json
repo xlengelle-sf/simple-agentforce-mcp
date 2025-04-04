@@ -1,0 +1,36 @@
+{
+  "name": "simple-agentforce-mcp",
+  "version": "1.1.0",
+  "description": "Simple Agentforce MCP integration for Claude Desktop",
+  "private": true,
+  "workspaces": [
+    "server",
+    "tool"
+  ],
+  "scripts": {
+    "setup": "./setup.sh",
+    "start:server": "cd server && npm start",
+    "start:tool": "cd tool && npm start",
+    "dev:server": "cd server && npm run dev",
+    "dev:tool": "cd tool && npm run dev",
+    "build": "npm run build --workspaces",
+    "test": "cd server && npm test",
+    "test:stream": "cd server && npm run test:stream"
+  },
+  "keywords": [
+    "mcp",
+    "agentforce",
+    "salesforce",
+    "claude"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/simple-agentforce-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/simple-agentforce-mcp/issues"
+  },
+  "homepage": "https://github.com/yourusername/simple-agentforce-mcp#readme"
+}

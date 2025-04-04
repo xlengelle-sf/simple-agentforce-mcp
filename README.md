@@ -91,6 +91,7 @@ Comprehensive documentation is available in the `docs` directory:
 - [Installation Guide](docs/INSTALLATION.md) - Detailed installation instructions
 - [Usage Guide](docs/USAGE.md) - How to use the integration with Claude Desktop
 - [API Reference](docs/API.md) - Detailed API documentation
+- [Streaming Guide](docs/STREAMING.md) - How to use the streaming functionality
 - [Architecture Overview](docs/ARCHITECTURE.md) - System design and architecture
 - [MCP Protocol Reference](docs/MCP_PROTOCOL.md) - Information about the MCP protocol
 - [Troubleshooting Guide](docs/TROUBLESHOOTING.md) - Solutions to common issues
