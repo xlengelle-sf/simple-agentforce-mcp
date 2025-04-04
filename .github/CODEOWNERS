@@ -1,0 +1,14 @@
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# they will be requested for review when someone opens a pull request.
+*       @xlengelle-sf
+
+# Server specific files
+/server/  @xlengelle-sf
+
+# Tool specific files
+/tool/    @xlengelle-sf
+
+# Documentation files
+/docs/    @xlengelle-sf
+*.md      @xlengelle-sf
