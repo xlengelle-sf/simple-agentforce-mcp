@@ -62,6 +62,23 @@ agentforce-server
 npx @xlengelle-sf/agentforce-server
 ```
 
+### Port Already in Use
+
+If you see an error about the port already being in use, you can specify a different port:
+
+```bash
+# Run with a different port
+PORT=3002 agentforce-server
+```
+
+### Using with agentforce-tool
+
+When using both server and tool:
+
+1. Ensure the server is running on port 3000 (default)
+2. Ensure the tool is configured with SERVER_URL=http://localhost:3000/api
+3. Run the tool on port 3001 (default): agentforce-tool
+
 ## API
 
 The server exposes the following MCP endpoints:
