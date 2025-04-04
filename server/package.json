@@ -24,13 +24,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agentforce-mcp/simple-agentforce-mcp.git",
+    "url": "git+https://github.com/xlengelle-sf/simple-agentforce-mcp.git",
     "directory": "server"
   },
   "bugs": {
-    "url": "https://github.com/agentforce-mcp/simple-agentforce-mcp/issues"
+    "url": "https://github.com/xlengelle-sf/simple-agentforce-mcp/issues"
   },
-  "homepage": "https://github.com/agentforce-mcp/simple-agentforce-mcp/tree/main/server#readme",
+  "homepage": "https://github.com/xlengelle-sf/simple-agentforce-mcp/tree/main/server#readme",
   "engines": {
     "node": ">=14.0.0"
   },

@@ -10,10 +10,18 @@ A simple and effective MCP server and tool suite for Salesforce Agentforce API, 
 
 This project provides a simplified way to connect Claude Desktop with Salesforce Agentforce, allowing users to interact with Salesforce agents directly from Claude Desktop. It implements the Model Context Protocol (MCP) to facilitate this integration.
 
-## Components
+✨ **Now available on npm!** ✨
+- Server: `npm install -g @xlengelle-sf/agentforce-server`
+- Tool: `npm install -g @xlengelle-sf/agentforce-tool`
 
-- **Server**: The MCP server that handles communication with Agentforce API
-- **Tool**: The MCP tool that integrates with Claude Desktop
+## Features
+
+- **Simple Integration**: Connect Claude Desktop to Salesforce Agentforce with minimal setup
+- **Streaming Support**: Real-time message streaming for responsive interactions
+- **Secure Authentication**: OAuth-based authentication with Salesforce
+- **Easy Configuration**: Simple environment variable configuration
+- **MCP Protocol**: Full implementation of the Model Context Protocol
+- **Documentation**: Comprehensive guides and API documentation
 
 ## Prerequisites
 
@@ -87,6 +95,24 @@ agentforce-tool
 3. Add a new tool with the following configuration:
    - Tool URL: `http://localhost:3001` (or the URL where the tool is running)
    - Tool Name: `agentforce`
+
+## Repository Structure
+
+This repository is organized as follows:
+
+```
+simple-agentforce-mcp/
+├── server/              # MCP server for Agentforce API
+│   ├── src/             # Server source code
+│   ├── dist/            # Compiled JavaScript (after build)
+│   └── README.md        # Server-specific documentation
+├── tool/                # MCP tool for Claude Desktop
+│   ├── src/             # Tool source code
+│   ├── dist/            # Compiled JavaScript (after build)
+│   └── README.md        # Tool-specific documentation
+├── docs/                # Documentation files
+└── setup.sh             # Setup script for local development
+```
 
 ## Documentation
 
@@ -238,6 +264,17 @@ cd server
 npm test
 ```
 
+## Contributing
+
+Contributions are welcome! Please read the [Contributing Guide](docs/CONTRIBUTING.md) for details on how to submit pull requests, create issues, and more.
+
 ## License
 
 [MIT License](LICENSE)
+
+## Acknowledgements
+
+- [Model Context Protocol](https://github.com/modelcontextprotocol/specification) - For the MCP specification
+- [FastMCP](https://github.com/jlowin/fastmcp) - For inspiration on MCP implementation
+- [Salesforce Agentforce API](https://developer.salesforce.com/docs/einstein/genai/guide/agent-api.html) - For the underlying API
+- [Claude](https://claude.ai) - For enabling AI-powered experiences
