@@ -84,6 +84,19 @@ simple-agentforce-tool
    - Tool URL: `http://localhost:3001` (or the URL where the tool is running)
    - Tool Name: `agentforce`
 
+## Documentation
+
+Comprehensive documentation is available in the `docs` directory:
+
+- [Installation Guide](docs/INSTALLATION.md) - Detailed installation instructions
+- [Usage Guide](docs/USAGE.md) - How to use the integration with Claude Desktop
+- [API Reference](docs/API.md) - Detailed API documentation
+- [Architecture Overview](docs/ARCHITECTURE.md) - System design and architecture
+- [MCP Protocol Reference](docs/MCP_PROTOCOL.md) - Information about the MCP protocol
+- [Troubleshooting Guide](docs/TROUBLESHOOTING.md) - Solutions to common issues
+- [Contributing Guide](docs/CONTRIBUTING.md) - How to contribute to the project
+- [Changelog](CHANGELOG.md) - Version history and changes
+
 ## API Usage
 
 The MCP server exposes the following tools:
@@ -156,6 +169,13 @@ npm install
 npm run dev
 ```
 
+### Testing
+
+```bash
+cd server
+npm test
+```
+
 ## License
 
-MIT
+[MIT License](LICENSE)
