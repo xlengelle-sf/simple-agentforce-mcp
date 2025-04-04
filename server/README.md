@@ -12,7 +12,32 @@ npm install @xlengelle-sf/agentforce-server -g
 
 ### Configuration
 
-Create a `.env` file with the following variables:
+You can configure the server in two ways:
+
+#### 1. Interactive CLI (Recommended)
+
+The server now features an interactive CLI that will prompt you for all required configuration values:
+
+```bash
+# Using the global installation
+agentforce-server
+
+# or using npx
+npx @xlengelle-sf/agentforce-server
+```
+
+When you run the server for the first time, it will ask for:
+- Salesforce Client ID
+- Salesforce Client Secret
+- Salesforce Org Base URL
+- Agentforce Agent ID
+- Server Port
+
+The values will be saved to a `.env` file for future use.
+
+#### 2. Manual Configuration
+
+Alternatively, you can create a `.env` file manually with the following variables:
 
 ```env
 # Server Configuration
@@ -26,6 +51,8 @@ AGENTFORCE_AGENT_ID=your_agent_id
 ```
 
 ### Start the Server
+
+If you've already configured the server (either through the interactive CLI or manual setup), just run:
 
 ```bash
 # Using the global installation

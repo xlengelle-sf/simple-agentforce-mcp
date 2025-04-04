@@ -1,6 +1,6 @@
 {
   "name": "@xlengelle-sf/agentforce-mcp",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Simple Agentforce MCP integration for Claude Desktop",
   "private": true,
   "workspaces": [

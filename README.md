@@ -46,6 +46,22 @@ npm install @xlengelle-sf/agentforce-server -g
 # Install the tool
 npm install @xlengelle-sf/agentforce-tool -g
 
+# Start the server with interactive configuration
+agentforce-server
+# The server will prompt you for:
+# - Salesforce Client ID
+# - Salesforce Client Secret
+# - Salesforce Org Base URL
+# - Agentforce Agent ID
+# - Server Port
+
+# In another terminal, run the tool
+agentforce-tool
+```
+
+Alternatively, you can manually create configuration files:
+
+```bash
 # Create configuration files
 mkdir -p ~/.simple-agentforce
 cat > ~/.simple-agentforce/.env << EOL
@@ -123,6 +139,7 @@ Comprehensive documentation is available in the `docs` directory:
 - [Getting Started](docs/GETTING_STARTED.md) - Quick start guide for new users
 - [Installation Guide](docs/INSTALLATION.md) - Detailed installation instructions
 - [Usage Guide](docs/USAGE.md) - How to use the integration with Claude Desktop
+- [Docker Usage](docs/DOCKER_USAGE.md) - How to use Docker for deployment
 - [API Reference](docs/API.md) - Detailed API documentation
 - [Streaming Guide](docs/STREAMING.md) - How to use the streaming functionality
 - [Architecture Overview](docs/ARCHITECTURE.md) - System design and architecture

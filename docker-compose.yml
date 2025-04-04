@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  server:
+    build:
+      context: ./server
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - AGENTFORCE_CLIENT_ID=${AGENTFORCE_CLIENT_ID}
+      - AGENTFORCE_CLIENT_SECRET=${AGENTFORCE_CLIENT_SECRET}
+      - AGENTFORCE_ORG_BASE_URL=${AGENTFORCE_ORG_BASE_URL}
+      - AGENTFORCE_AGENT_ID=${AGENTFORCE_AGENT_ID}
+    restart: unless-stopped
+
+  tool:
+    build:
+      context: ./tool
+    ports:
+      - "3001:3001"
+    environment:
+      - TOOL_PORT=3001
+      - SERVER_URL=http://server:3000/api
+    depends_on:
+      - server
+    restart: unless-stopped
