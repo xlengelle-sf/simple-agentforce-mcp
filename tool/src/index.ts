@@ -50,7 +50,18 @@ app.all('*', async (req, res) => {
 });
 
 // Start server
-app.listen(toolConfig.port, () => {
-  console.log(`Simple Agentforce MCP Tool is running on port ${toolConfig.port}`);
-  console.log(`Add the following URL to Claude Desktop: http://localhost:${toolConfig.port}`);
-});
+try {
+  app.listen(toolConfig.port, () => {
+    console.log(`Simple Agentforce MCP Tool is running on port ${toolConfig.port}`);
+    console.log(`Add the following URL to Claude Desktop: http://localhost:${toolConfig.port}`);
+  });
+} catch (error: any) {
+  if (error.code === 'EADDRINUSE') {
+    console.error(`Port ${toolConfig.port} is already in use. Please choose a different port by setting the TOOL_PORT environment variable.`);
+    console.error(`You can run the tool again with a different port using:`);
+    console.error(`TOOL_PORT=3002 agentforce-tool`);
+    process.exit(1);
+  } else {
+    throw error;
+  }
+}

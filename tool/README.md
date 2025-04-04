@@ -12,15 +12,11 @@ npm install @xlengelle-sf/agentforce-tool -g
 
 ### Configuration
 
-Create a `.env` file with the following variables:
+You can configure the tool in two ways:
 
-```env
-# Tool Configuration
-SERVER_URL=http://localhost:3000/api
-TOOL_PORT=3001
-```
+#### 1. Interactive CLI (Recommended)
 
-### Start the Tool
+The tool now features an interactive CLI that will prompt you for all required configuration values:
 
 ```bash
 # Using the global installation
@@ -28,6 +24,31 @@ agentforce-tool
 
 # or using npx
 npx @xlengelle-sf/agentforce-tool
+```
+
+When you run the tool for the first time, it will ask for:
+- Server URL (defaults to http://localhost:3000/api)
+- Tool Port (defaults to 3001)
+
+The values will be saved to a `.env` file for future use. The tool will automatically load this configuration file on subsequent starts.
+
+#### 2. Manual Configuration
+
+Alternatively, you can create a `.env` file manually with the following variables:
+
+```env
+# Tool Configuration
+SERVER_URL=http://localhost:3000/api
+TOOL_PORT=3001
+```
+
+### Port Already in Use
+
+If you see an error about the port already being in use, you can specify a different port:
+
+```bash
+# Run with a different port
+TOOL_PORT=3002 agentforce-tool
 ```
 
 ## Configuring Claude Desktop

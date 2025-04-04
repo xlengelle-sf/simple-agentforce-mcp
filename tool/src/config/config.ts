@@ -1,7 +1,9 @@
 import dotenv from 'dotenv';
+import path from 'path';
 
-// Load environment variables
-dotenv.config();
+// Load environment variables - prefer local .env file if it exists
+const envPath = path.resolve(process.cwd(), '.env');
+dotenv.config({ path: envPath });
 
 // Tool Configuration
 export const toolConfig = {
