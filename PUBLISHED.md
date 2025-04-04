@@ -22,8 +22,15 @@ agentforce-tool
 ## Next Steps
 
 1. **Create a GitHub Repository**
-   - Create a new repository on GitHub
-   - Push your code using the instructions in [GITHUB_SETUP.md](GITHUB_SETUP.md)
+   - Run the GitHub setup script to configure your repository:
+     ```bash
+     ./setup-github.sh
+     ```
+   - Follow the instructions to create a new repository on GitHub
+   - Push your code to GitHub:
+     ```bash
+     git push -u origin main
+     ```
 
 2. **Update Badges**
    - The npm version badges in the README.md will now work correctly
