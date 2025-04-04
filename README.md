@@ -2,6 +2,10 @@
 
 A simple and effective MCP server and tool suite for Salesforce Agentforce API, enabling seamless integration with Claude Desktop.
 
+[![npm version](https://img.shields.io/npm/v/@simple-agentforce/server.svg)](https://www.npmjs.com/package/@simple-agentforce/server)
+[![npm version](https://img.shields.io/npm/v/@simple-agentforce/tool.svg)](https://www.npmjs.com/package/@simple-agentforce/tool)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Overview
 
 This project provides a simplified way to connect Claude Desktop with Salesforce Agentforce, allowing users to interact with Salesforce agents directly from Claude Desktop. It implements the Model Context Protocol (MCP) to facilitate this integration.
@@ -22,33 +26,6 @@ This project provides a simplified way to connect Claude Desktop with Salesforce
 2. Node.js (v14 or later)
 
 ## Quick Start
-
-### Installation from source
-
-1. Clone the repository
-   ```bash
-   git clone https://github.com/yourusername/simple-agentforce-mcp.git
-   cd simple-agentforce-mcp
-   ```
-
-2. Run the setup script
-   ```bash
-   ./setup.sh
-   ```
-
-3. Configure your environment variables
-   - Edit `server/.env` with your Salesforce credentials
-   - Edit `tool/.env` if your server is running on a different URL
-
-4. Start the server
-   ```bash
-   cd server && npm start
-   ```
-
-5. In another terminal, start the tool
-   ```bash
-   cd tool && npm start
-   ```
 
 ### Installation via npm
 
@@ -75,6 +52,33 @@ simple-agentforce-server
 # In another terminal, run the tool
 simple-agentforce-tool
 ```
+
+### Installation from source
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/agentforce-mcp/simple-agentforce-mcp.git
+   cd simple-agentforce-mcp
+   ```
+
+2. Run the setup script
+   ```bash
+   ./setup.sh
+   ```
+
+3. Configure your environment variables
+   - Edit `server/.env` with your Salesforce credentials
+   - Edit `tool/.env` if your server is running on a different URL
+
+4. Start the server
+   ```bash
+   cd server && npm start
+   ```
+
+5. In another terminal, start the tool
+   ```bash
+   cd tool && npm start
+   ```
 
 ## Configuration in Claude Desktop
 
