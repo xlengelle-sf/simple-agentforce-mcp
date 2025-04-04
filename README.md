@@ -118,6 +118,7 @@ simple-agentforce-mcp/
 
 Comprehensive documentation is available in the `docs` directory:
 
+- [Getting Started](docs/GETTING_STARTED.md) - Quick start guide for new users
 - [Installation Guide](docs/INSTALLATION.md) - Detailed installation instructions
 - [Usage Guide](docs/USAGE.md) - How to use the integration with Claude Desktop
 - [API Reference](docs/API.md) - Detailed API documentation
