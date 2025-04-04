@@ -20,8 +20,25 @@
     "salesforce",
     "claude"
   ],
-  "author": "",
+  "author": "Claude <claude@anthropic.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agentforce-mcp/simple-agentforce-mcp.git",
+    "directory": "server"
+  },
+  "bugs": {
+    "url": "https://github.com/agentforce-mcp/simple-agentforce-mcp/issues"
+  },
+  "homepage": "https://github.com/agentforce-mcp/simple-agentforce-mcp/tree/main/server#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "axios": "^1.6.2",
     "cors": "^2.8.5",

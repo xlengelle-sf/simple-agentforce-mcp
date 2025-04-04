@@ -195,7 +195,7 @@ export class AgentforceMessagingService {
               
               // Try to parse as JSON
               try {
-                const parsedData = JSON.parse(sseEvent.data);
+                const parsedData = JSON.parse(sseEvent.data || '');
                 if (parsedData.type === 'content') {
                   fullMessage += parsedData.content;
                 }
