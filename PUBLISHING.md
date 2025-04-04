@@ -72,16 +72,16 @@ After publishing, test the packages to make sure they work correctly:
 
 ```bash
 # Install the server globally
-npm install -g @simple-agentforce/server
+npm install -g @xlengelle-sf/agentforce-server
 
 # Install the tool globally
-npm install -g @simple-agentforce/tool
+npm install -g @xlengelle-sf/agentforce-tool
 
 # Run the server
-simple-agentforce-server
+agentforce-server
 
 # In a different terminal, run the tool
-simple-agentforce-tool
+agentforce-tool
 ```
 
 ## 5. Enable GitHub Pages (Optional)

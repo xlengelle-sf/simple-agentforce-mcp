@@ -1,11 +1,11 @@
-# @simple-agentforce/tool
+# @xlengelle-sf/agentforce-tool
 
 A MCP tool for integrating Claude Desktop with Salesforce Agentforce.
 
 ## Installation
 
 ```bash
-npm install @simple-agentforce/tool -g
+npm install @xlengelle-sf/agentforce-tool -g
 ```
 
 ## Usage
@@ -24,10 +24,10 @@ TOOL_PORT=3001
 
 ```bash
 # Using the global installation
-simple-agentforce-tool
+agentforce-tool
 
 # or using npx
-npx @simple-agentforce/tool
+npx @xlengelle-sf/agentforce-tool
 ```
 
 ## Configuring Claude Desktop

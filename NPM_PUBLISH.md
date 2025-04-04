@@ -99,11 +99,11 @@ Follow semantic versioning:
 
 ## Scoped Packages
 
-The packages are published under the `@simple-agentforce` scope. To use them, users will need to install them:
+The packages are published under the `@xlengelle-sf` scope. To use them, users will need to install them:
 
 ```bash
-npm install @simple-agentforce/server -g
-npm install @simple-agentforce/tool -g
+npm install @xlengelle-sf/agentforce-server -g
+npm install @xlengelle-sf/agentforce-tool -g
 ```
 
 ## Package Documentation
@@ -120,16 +120,16 @@ After publishing, test the packages from npm to ensure they work correctly:
 
 ```bash
 # Create a test directory
-mkdir test-simple-agentforce
-cd test-simple-agentforce
+mkdir test-agentforce
+cd test-agentforce
 
 # Install packages
-npm install @simple-agentforce/server @simple-agentforce/tool
+npm install @xlengelle-sf/agentforce-server @xlengelle-sf/agentforce-tool
 
 # Test functionality
-npx simple-agentforce-server
+npx agentforce-server
 # In another terminal
-npx simple-agentforce-tool
+npx agentforce-tool
 ```
 
 ## Unpublishing Packages
@@ -137,8 +137,8 @@ npx simple-agentforce-tool
 If you need to unpublish a package (within 72 hours of publishing):
 
 ```bash
-npm unpublish @simple-agentforce/server@1.1.0
-npm unpublish @simple-agentforce/tool@1.1.0
+npm unpublish @xlengelle-sf/agentforce-server@1.1.0
+npm unpublish @xlengelle-sf/agentforce-tool@1.1.0
 ```
 
 Note: npm has restrictions on unpublishing packages to ensure stability for users.

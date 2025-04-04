@@ -2,8 +2,8 @@
 
 A simple and effective MCP server and tool suite for Salesforce Agentforce API, enabling seamless integration with Claude Desktop.
 
-[![npm version](https://img.shields.io/npm/v/@simple-agentforce/server.svg)](https://www.npmjs.com/package/@simple-agentforce/server)
-[![npm version](https://img.shields.io/npm/v/@simple-agentforce/tool.svg)](https://www.npmjs.com/package/@simple-agentforce/tool)
+[![npm version](https://img.shields.io/npm/v/@xlengelle-sf/agentforce-server.svg)](https://www.npmjs.com/package/@xlengelle-sf/agentforce-server)
+[![npm version](https://img.shields.io/npm/v/@xlengelle-sf/agentforce-tool.svg)](https://www.npmjs.com/package/@xlengelle-sf/agentforce-tool)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
@@ -31,10 +31,10 @@ This project provides a simplified way to connect Claude Desktop with Salesforce
 
 ```bash
 # Install the server
-npm install @simple-agentforce/server -g
+npm install @xlengelle-sf/agentforce-server -g
 
 # Install the tool
-npm install @simple-agentforce/tool -g
+npm install @xlengelle-sf/agentforce-tool -g
 
 # Create configuration files
 mkdir -p ~/.simple-agentforce
@@ -47,10 +47,10 @@ AGENTFORCE_AGENT_ID=your_agent_id
 EOL
 
 # Start the server
-simple-agentforce-server
+agentforce-server
 
 # In another terminal, run the tool
-simple-agentforce-tool
+agentforce-tool
 ```
 
 ### Installation from source

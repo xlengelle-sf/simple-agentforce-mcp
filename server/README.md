@@ -1,11 +1,11 @@
-# @simple-agentforce/server
+# @xlengelle-sf/agentforce-server
 
 A MCP server for integrating with Salesforce Agentforce API.
 
 ## Installation
 
 ```bash
-npm install @simple-agentforce/server -g
+npm install @xlengelle-sf/agentforce-server -g
 ```
 
 ## Usage
@@ -29,10 +29,10 @@ AGENTFORCE_AGENT_ID=your_agent_id
 
 ```bash
 # Using the global installation
-simple-agentforce-server
+agentforce-server
 
 # or using npx
-npx @simple-agentforce/server
+npx @xlengelle-sf/agentforce-server
 ```
 
 ## API
