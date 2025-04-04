@@ -12,6 +12,7 @@ const envFilePath = path.resolve(process.cwd(), '.env');
 // Create or update the .env file with user inputs
 async function setupEnvFile(): Promise<void> {
   console.log('Welcome to Agentforce MCP Tool Setup!');
+  console.log('NOTE: Make sure the server is running on port 3000 (default) before configuring the tool.');
   
   // Load existing .env if it exists
   let existingEnv: Record<string, string> = {};
