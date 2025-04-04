@@ -133,7 +133,64 @@ Sends a message to the Agentforce agent.
 }
 ```
 
-### 3. end_session
+### 3. send_message_stream
+
+Sends a message to the Agentforce agent with streaming response.
+
+**Input:**
+```json
+{
+  "sessionId": "string",
+  "message": "string"
+}
+```
+
+**Output:**
+```json
+{
+  "streamId": "string"
+}
+```
+
+### 4. get_stream_message
+
+Gets a message chunk from a streaming response.
+
+**Input:**
+```json
+{
+  "streamId": "string"
+}
+```
+
+**Output:**
+```json
+{
+  "type": "chunk | complete | error | waiting",
+  "data": "string",
+  "error": "string"
+}
+```
+
+### 5. cancel_stream
+
+Cancels an active streaming message.
+
+**Input:**
+```json
+{
+  "streamId": "string"
+}
+```
+
+**Output:**
+```json
+{
+  "success": true
+}
+```
+
+### 6. end_session
 
 Ends the session with the Agentforce agent.
 

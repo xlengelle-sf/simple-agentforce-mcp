@@ -27,8 +27,28 @@ Claude should respond by creating a session with your Agentforce agent and enabl
 The Simple Agentforce MCP integration follows this workflow:
 
 1. **Session Creation**: When you first invoke the tool, it creates a new session with your Agentforce agent.
-2. **Message Exchange**: Your messages are sent to the agent, maintaining the correct sequence ID for proper conversation flow.
+2. **Message Exchange**: Your messages are sent to the agent, maintaining the correct sequence ID for proper conversation flow. You can use either:
+   - **Synchronous Messages**: Simple request-response pattern
+   - **Streaming Messages**: Real-time response streaming for better user experience
 3. **Session Termination**: The session can be terminated explicitly, or it will time out after a period of inactivity.
+
+### Streaming vs. Synchronous Communication
+
+The integration supports two modes of communication:
+
+**Synchronous Communication** (default):
+- Simpler to implement
+- Waits for the full response before returning
+- Best for short interactions
+- Uses the `send_message` tool
+
+**Streaming Communication**:
+- Provides real-time response as it's generated
+- Better user experience for longer responses
+- More complex implementation
+- Uses the `send_message_stream`, `get_stream_message`, and `cancel_stream` tools
+
+You can choose which mode to use based on your needs.
 
 ## Example Conversation
 
@@ -55,6 +75,20 @@ I've connected to your Salesforce agent. What details would you like to know abo
 Would you like more details on any of these opportunities?
 
 ## Advanced Usage
+
+### Using Streaming Responses
+
+To use streaming responses for a more interactive experience:
+
+**You**: Can you use the Agentforce tool with streaming to answer my question about Salesforce accounts?
+
+**Claude**: I'll help you with your question about Salesforce accounts using streaming responses.
+
+[Claude uses `create_session` followed by `send_message_stream`]
+
+[Claude then repeatedly uses `get_stream_message` to fetch response chunks in real-time, showing you the response as it's generated]
+
+This creates a more dynamic experience as you see the answer being constructed in real-time, similar to how Claude normally responds.
 
 ### Working with Multiple Sessions
 

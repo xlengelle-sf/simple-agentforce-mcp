@@ -79,6 +79,25 @@ export interface AgentforceResponse {
   message: string;
 }
 
+export interface AgentforceStreamChunk {
+  id?: string;
+  event?: string;
+  data?: string;
+  retry?: number;
+}
+
+export enum StreamResponseType {
+  CHUNK = 'chunk',
+  COMPLETE = 'complete',
+  ERROR = 'error'
+}
+
+export interface StreamResponseEvent {
+  type: StreamResponseType;
+  data?: string;
+  error?: string;
+}
+
 export interface AgentforceAuthToken {
   access_token: string;
   instance_url: string;

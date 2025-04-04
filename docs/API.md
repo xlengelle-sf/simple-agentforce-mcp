@@ -167,6 +167,85 @@ Sends a message to the Agentforce agent.
 - `MESSAGE_ERROR`: Failed to send a message to Agentforce
 - `SESSION_ERROR`: Session not found or invalid
 
+### send_message_stream
+
+Sends a message to the Agentforce agent with streaming response.
+
+**Input Parameters:**
+```json
+{
+  "sessionId": "string",
+  "message": "string"
+}
+```
+
+**Output:**
+```json
+{
+  "status": "success",
+  "result": {
+    "streamId": "string"
+  }
+}
+```
+
+**Error Types:**
+- `INVALID_PARAMETERS`: Missing required parameters
+- `SESSION_ERROR`: Session not found or invalid
+- `STREAM_ERROR`: Failed to initiate streaming message
+
+### get_stream_message
+
+Gets a message chunk from a streaming response.
+
+**Input Parameters:**
+```json
+{
+  "streamId": "string"
+}
+```
+
+**Output:**
+```json
+{
+  "status": "success",
+  "result": {
+    "type": "chunk | complete | error | waiting",
+    "data": "string",
+    "error": "string"
+  }
+}
+```
+
+**Error Types:**
+- `INVALID_PARAMETERS`: Missing streamId parameter
+- `STREAM_ERROR`: Error getting stream message
+
+### cancel_stream
+
+Cancels an active streaming message.
+
+**Input Parameters:**
+```json
+{
+  "streamId": "string"
+}
+```
+
+**Output:**
+```json
+{
+  "status": "success",
+  "result": {
+    "success": true
+  }
+}
+```
+
+**Error Types:**
+- `INVALID_PARAMETERS`: Missing streamId parameter
+- `STREAM_ERROR`: Error cancelling stream
+
 ### end_session
 
 Ends the session with the Agentforce agent.

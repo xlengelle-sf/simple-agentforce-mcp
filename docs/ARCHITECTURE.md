@@ -156,6 +156,7 @@ The server maintains session state in memory, tracking:
 - Session IDs
 - Session keys
 - Sequence IDs for messages
+- Streaming message queues
 
 This approach simplifies the client interface but makes the server stateful. For production deployments, consider using a persistent storage solution.
 
@@ -166,18 +167,37 @@ The OAuth tokens are cached in memory with automatic refresh handling to:
 - Avoid hitting Salesforce API limits
 - Improve response times
 
-### 3. Synchronous vs. Streaming
+### 3. Dual Communication Modes
 
-This implementation uses the synchronous messaging endpoint for simplicity. A future enhancement could support the streaming endpoint for real-time responses.
+The implementation supports both synchronous and streaming communication:
 
-### 4. Tool as Proxy
+**Synchronous Messaging**:
+- Simpler implementation
+- Full response in a single API call
+- Good for simple, short interactions
+
+**Streaming Messaging**:
+- Real-time response delivery
+- Better user experience for longer responses
+- Implemented with Server-Sent Events (SSE)
+- Event-driven architecture with message queuing
+
+### 4. Streaming Implementation
+
+The streaming implementation uses:
+- EventEmitter for handling asynchronous events
+- Message queuing for buffering chunks
+- Polling mechanism for client retrieval
+- SSE parsing for Agentforce streaming responses
+
+### 5. Tool as Proxy
 
 The MCP tool acts as a simple proxy rather than implementing its own logic. This approach:
 - Simplifies the architecture
 - Reduces code duplication
 - Makes maintenance easier
 
-### 5. Type Safety
+### 6. Type Safety
 
 TypeScript is used throughout to ensure type safety and improve code quality.
 
