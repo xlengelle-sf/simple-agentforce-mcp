@@ -31,9 +31,9 @@ When you run the server for the first time, it will ask for:
 - Salesforce Client Secret
 - Salesforce Org Base URL
 - Agentforce Agent ID
-- Server Port
+- Server Port (defaults to 3000)
 
-The values will be saved to a `.env` file for future use.
+The values will be saved to a `.env` file for future use. The server will automatically load this configuration file on subsequent starts.
 
 #### 2. Manual Configuration
 

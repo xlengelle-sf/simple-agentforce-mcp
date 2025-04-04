@@ -1,8 +1,10 @@
 import dotenv from 'dotenv';
+import path from 'path';
 import { AgentforceConfig, MCPConfig } from '../types/mcp';
 
-// Load environment variables
-dotenv.config();
+// Load environment variables - prefer local .env file if it exists
+const envPath = path.resolve(process.cwd(), '.env');
+dotenv.config({ path: envPath });
 
 // MCP Server Configuration
 export const mcpConfig: MCPConfig = {

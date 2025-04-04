@@ -19,6 +19,9 @@ async function setupEnvFile(): Promise<void> {
   if (fs.existsSync(envFilePath)) {
     existingEnv = dotenv.parse(fs.readFileSync(envFilePath));
   }
+  
+  // Reload dotenv with current file to ensure we have the latest values
+  dotenv.config({ path: envFilePath });
 
   // Define the questions for prompts
   const questions = [
@@ -90,16 +93,26 @@ PORT=${response.port}
   }
 }
 
-// Check if config is already valid
-const configErrors = validateConfig();
-if (configErrors.length === 0) {
-  // If configuration is valid, start the server directly
-  console.log('Using existing configuration from environment variables.');
-  import('./index').catch(error => {
-    console.error('Failed to start the server:', error);
-    process.exit(1);
-  });
-} else {
-  // If configuration is missing or invalid, prompt for values
-  setupEnvFile();
+// Setup the server
+async function startServer() {
+  // Load .env file first
+  if (fs.existsSync(envFilePath)) {
+    dotenv.config({ path: envFilePath });
+  }
+  
+  // Check if config is already valid
+  const configErrors = validateConfig();
+  if (configErrors.length === 0) {
+    // If configuration is valid, start the server directly
+    console.log('Using existing configuration from environment variables.');
+    import('./index').catch(error => {
+      console.error('Failed to start the server:', error);
+      process.exit(1);
+    });
+  } else {
+    // If configuration is missing or invalid, prompt for values
+    await setupEnvFile();
+  }
 }
+
+startServer();
